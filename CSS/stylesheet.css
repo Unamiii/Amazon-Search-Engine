@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    background-size: cover;
+    animation: changeBackground 25s infinite;
+    transition: background-image 10s ease-in-out;
+}
+
+
+
+header{
+    border: 2px solid #222;
+    padding-top: 20px;
+    background-color:#232f3e;
+    margin: 0;
+    border-width: 0px;
+    
+   
+    
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes changeBackground {
+0%, 100% {
+    background-image:url('../images/glenn-carstens-peters-EOQhsfFBhRk-unsplash.jpg');
+}
+25% {
+    background-image:url('../images/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg');
+}
+50% {
+    background-image:url('../images/javier-martinez-hUD0PUczwJQ-unsplash.jpg');
+}
+75% {
+    background-image:url('../images/alexey-savchenko-k4Akpt5-Sfk-unsplash.jpg');
+}
+}
+
+
+nav{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0px;
+background-color:#232f3e ;
+text-align: center;
+}
+
+nav ul{
+display:inline-block;
+padding: 0;
+margin: 0;
+}
+nav ul li{
+list-style: none;
+padding: 0px 10px;
+display: inline-block;
+font-family: 'Gills sans', sans-serif;
+}
+
+nav ul li a{
+color: white;
+font-size: medium;
+text-decoration: none;
+}
+
+ h1{
+    text-align: center;
+    color: white;
+    font-family: "Gill Sans", sans-serif;
+    margin: 0;
+}
+p{
+    text-align: center;
+    color: white;
+    font-family: "Gill Sans", sans-serif;
+}
+form{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    margin: 20px;
+    padding: 0px;
+
+}
+input[type="text"] {
+padding: 10px;
+margin-right: 15px;
+border-radius: 5px;
+border: 1px solid #ccc;
+
+}
+
+input[type="submit"] {
+padding: 10px;
+margin: 0;
+background-color: #ff9900;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+
+}
+
+select{
+padding: 5px;
+border-radius: 5px;
+}
+.sort-options{
+display: flex;
+margin-left: 20px;
+}
+.sort-options label{
+margin-right: 10px;
+font-family: 'Gill sans', sans-serif;
+}
+.recommendation-container {
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+
+}
+
+.recommendation {
+background-color: #fff;
+padding: 10px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width: 30%;
+font-family: 'Gill sans', sans-serif; 
+margin: 20px;
+}
+
+.recommendation img {
+max-width: 100%;
+height: auto;
+border-radius: 5px;
+}
+.button-link {
+display: inline-block;
+background-color: #d3d6db;
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+border-radius: 4px;
+padding: 10px 20px;
+border-radius: 0px;
+margin: 4px 2px;
+}

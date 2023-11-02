@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../CSS/stylesheet.css" rel="stylesheet">
+        <title>AMAZON WEBSITE</title>
+    </head>
+    <body>
+
+    <header>
+        <h1> Amazon Search Engine</h1>
+
+    </header>
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="../HTML/page2.html">Book Store</a></li>
+        <li><a href="https://www.primevideo.com/offers/nonprimehomepage/ref=dv_web_force_root">Prime Video</a></li>
+        </ul>
+    </nav>
+    
+        <form id="searchForm" onsubmit="searchAmazon(); return false;">
+            <input type="text" id="searchInput" placeholder="Search Amazon">
+            <input type="submit" value="Search">
+        </form>
+        <div class="sort-options">
+            <label for="sortSelect">Sort by:</label>
+            <select id="sortSelect" name="sort">
+                <option value="lowToHigh">Price (Low to High)</option>
+                <option value="highToLow">Price (High to Low)</option>
+                <option value="featured">Featured</option>
+                <option value="customerReview">Avg. Customer Review</option>
+            </select>
+        </div>
+        </div>
+        <script>
+            function searchAmazon() {
+                const searchInput = document.getElementById('searchInput').value;
+
+                const amazonURL = 'https://www.amazon.com/s?k=' + encodeURIComponent(searchInput);
+                window.location.href = amazonURL;
+            }
+        </script>
+        <div class="recommendation-container">
+            <div class="recommendation">
+                <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\thought-catalog-o0Qqw21-0NI-unsplash.jpg" alt="Product 1">
+                <h3>Books</h3>
+                <a href="../HTML/page2.html" class="button-link">See More</a>
+            </div>
+
+            <div class="recommendation">
+                <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\thibault-penin-GgOitQkoioo-unsplash.jpg" alt="Product 2">
+                <h3>Prime Video</h3>
+                <a href="../HTML/page3.html" class="button-link">See More</a>
+            </div>
+
+            <div class="recommendation">
+                <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\c-d-x-PDX_a_82obo-unsplash.jpg" alt="Product 3">
+                <h3>Amazon Home</h3>
+                <a href="https://www.amazon.com/s?k=" class="button-link">See More</a>
+            </div>
+        </div>
+    </body>
+</html>

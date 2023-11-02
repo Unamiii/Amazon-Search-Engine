@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Amazon Bookstore</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: #f3f3f3;
+        }
+
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            float: left;
+            margin: 10px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 45px;
+            text-align: center;
+            max-width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+       
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0px;
+            background-color:#232f3e ;
+            text-align: center;
+        }
+
+        nav ul{
+            display:inline-block;
+            padding: 10px;
+            margin: 0;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 0px 20px;
+            display: inline-block;
+            font-family: 'Gills sans', sans-serif;
+        }
+
+        nav ul li a{
+            color: white;
+            font-size: medium;
+            text-decoration: none;
+        }
+
+        nav h1{
+            text-align: center;
+            padding: 0px;
+            margin: 0px;
+            color: white;
+            font-family: 'Gills sans', sans-serif;
+        }
+        #search-container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        #search-input {
+            padding: 8px 16px;
+            font-size: 12px;
+            border: 4px;
+            border-radius: 5px;
+        }
+
+        #search-btn {
+            padding: 8px 16px;
+            font-size: 12px;
+            cursor: pointer;
+           background-color: #ff9900;
+           border-radius: 5px;
+           border: 4px;
+           color: #f3f3f3;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <h1>AMAZON BOOK SEARCH ENGINE</h1>
+        <ul>
+            <li><a href="../HTML/index.html">Home</a></li>
+            <li><a href="../HTML/page3.html">Prime Video</a></li>
+        </ul>
+    </nav>
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Enter book title...">
+        <button id="search-btn" onclick="searchGoogleBooks()">Search</button>
+    </div>
+    
+    <h2 style="font-family: 'Gills sans', sans-serif;">Results</h2>
+    <label for="sortSelect">Sort by:</label>
+    <select id="sortSelect" onchange="sortProducts()">
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="price">Price</option>
+    </select>
+
+    <div class="product-container" id="product-container">
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\anastasia-zhenina-axXCEJhcxKw-unsplash.jpg" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Author: Author 1</p>
+            <p>Price: $19.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\mel-poole-pPUZ3FoSRu8-unsplash.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Author: Author 2</p>
+            <p>Price: $24.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\morgan-housel-aZ_MmSmAcjg-unsplash.jpg" alt="book 3">
+            <h3>Book Title 3</h3>
+            <p>Author: Author 3</p>
+            <p>Price: $10.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="C:\Users\Hunam\OneDrive\Documents\Modul\Amazon\images\matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="book 4">
+            <h3>Book Title 4</h3>
+            <p>Author : AUthor 4</p>
+            <p>Price : $15.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <script>
+        function searchGoogleBooks() {
+
+            var searchTerm = document.getElementById("search-input").value;
+    
+            var searchUrl = "https://www.google.com/search?q=" + encodeURIComponent(searchTerm + " books");
+    
+            window.open(searchUrl, "_blank");
+        }
+    </script>
+    <script>
+        function sortProducts() {
+            var sortSelect = document.getElementById("sortSelect");
+            var sortBy = sortSelect.value;
+
+            var container = document.getElementById("product-container");
+            var products = Array.from(container.getElementsByClassName("product"));
+
+            products.sort(function (a, b) {
+                var aValue, bValue;
+
+                if (sortBy === "title" || sortBy === "author") {
+                    aValue = a.dataset[sortBy].toLowerCase();
+                    bValue = b.dataset[sortBy].toLowerCase();
+                } else if (sortBy === "price") {
+                    aValue = parseFloat(a.dataset[sortBy]);
+                    bValue = parseFloat(b.dataset[sortBy]);
+                }
+
+                if (aValue < bValue) return -1;
+                if (aValue > bValue) return 1;
+                return 0;
+            });
+        }
+    </script>
+
+</body>
+</html>
+

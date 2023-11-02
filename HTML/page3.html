@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAZON WEBSITE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            background-color: #f3f3f3;
+            padding: 0;
+            background-image: url('../images/thibault-penin-GgOitQkoioo-unsplash.jpg');
+            background-size: 100%;
+            background-position-x: 50%;
+            background-position-y: 10%;
+            background-repeat: no-repeat;
+        }
+
+        header{
+            text-align: center;
+            padding: 0px;
+            background-color:#232f3e;
+            margin: 0px;
+            padding-top: 0;
+
+        }
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0px;
+            background-color:#232f3e ;
+            text-align: center;
+
+        }
+        
+        nav ul{
+            display:inline-block;
+            padding: 10px;
+            margin: 0;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 0px 10px;
+            display: inline-block;
+            font-family: 'Gills sans', sans-serif;
+        }
+
+        nav ul li a{
+            color: white;
+            font-size: medium;
+            text-decoration: none;
+        }
+        nav, h1{
+            color: white;
+            text-align: center;
+        }
+        #search-container {
+            text-align: center;
+            margin: 50px;
+        }
+
+        #search-input {
+            padding: 8px 16px;
+            font-size: 12px;
+            border: 4px;
+            border-radius: 5px;
+        }
+
+        #search-btn {
+            padding: 8px 16px;
+            font-size: 12px;
+            cursor: pointer;
+           background-color: #ff9900;
+           border-radius: 5px;
+           border: 4px;
+           color: #f3f3f3;
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <h1>AMAZON PRIME ENGINE</h1>
+    <ul>
+        <li><a href="../HTML/index.html">Home</a></li>
+        <li><a href="../HTML/page2.html">Book Store</a></li>
+    </ul>
+</nav>
+<div id="search-container">
+    <input type="text" id="search-input" placeholder="Enter Video title...">
+    <button id="search-btn" onclick="searchAmazonPrime()">Search</button>
+</div>
+
+    <script>
+        function searchAmazonPrime() {
+
+            var searchTerm = document.getElementById("search-input").value;
+    
+            var searchUrl = "https://www.amazon.com/" + encodeURIComponent(searchTerm + " Prime");
+    
+            window.open(searchUrl, "_blank");
+        }
+    </script>
+</body>
+</html>
